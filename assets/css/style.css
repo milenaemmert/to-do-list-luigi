@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Monomaniac One';
+    src: url(assets/font-monomaniac-one/monomaniac-one-regular.ttf);
+}
+
+body {
+    background-color: #2D2F34;
+    font-family: 'Monomaniac One';
+    color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    padding-top: 48px;
+}
+
+.container-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 72px;
+    padding-bottom: 48px;
+}
+
+.task-list {
+    width: 520px;
+    background-color: #f8f8f8;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.add-task {
+    height: 96px;
+    background-color: #22AE25;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form-input {
+    background-color: #22AE25;
+    border: none;
+    outline: none;
+    width: 320px;
+    height: 64px;
+    font-family: 'Monomaniac One';
+    color: #f8f8f8;
+    font-size: 36px;
+    padding-bottom: 10px;
+}
+
+::placeholder {
+    color: #f8f8f860;
+    font-size: 36px;
+    font-family: 'Monomaniac One';
+}
+
+.form-button {
+    background-color: #2D2F34;
+    color: #f8f8f8;
+    font-family: 'Monomaniac One';
+    font-size: 36px;
+    width: 174px;
+    height: 64px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-button:hover {
+    cursor: pointer;
+    background-color: #3E424A;
+}
+
+.form-button:active {
+    background-color: #2D2F34;
+    outline: #3E424A solid 4px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+}
+
+.task {
+    height: 96px;
+    background-color: #2D2F34;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.li__p--task {
+    font-size: 36px;
+    padding-bottom: 10px;
+}
+
+.check-button {
+    background-color: #22AE25;
+    color: #f8f8f8;
+    font-family: 'Monomaniac One';
+    font-size: 36px;
+    width: 162px;
+    height: 64px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.check-button:hover {
+    cursor: pointer;
+    background-color: #40DE43;
+}
+
+.check-button:active {
+    background-color: #22AE25;
+    outline: #40DE43 solid 4px;
+}
+
+.task-done {
+    text-decoration: line-through;
+    text-decoration-thickness: 6px;
+}
+
+.opacity {
+    opacity: 40%;
+}
+
+/*>>>>>-----Media Queries*/
+@media screen and (max-width:1100px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .container-title {
+        flex-direction: row;   
+        gap: 48px;    
+    }
+
+    .container-title img {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .container-title img {
+        width: 72px;
+    }
+
+    h1 {
+        font-size: 36px;
+        padding-bottom: initial;
+    }
+
+    .task-list {
+        width: 320px;
+    }
+
+    .form-input {
+        width: 300px;
+        font-size: 20px;
+    }
+
+    ::placeholder {
+        font-size: 20px;
+    }
+
+    .form-button {
+        width: 80px;
+        height: 52px;
+        font-size: 20px;
+        align-items: center;
+    }
+
+    .li__p--task {
+        font-size: 20px;
+    }
+
+    .check-button {
+        width: 80px;
+        height: 52px;
+        font-size: 20px;
+        align-items: center;
+}

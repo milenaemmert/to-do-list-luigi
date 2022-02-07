@@ -8,9 +8,9 @@ const createTask = () => {
 
     const task = document.createElement('li')
     task.classList.add('task')
-    task.setAttribute('data-item', '')
 
-    const content = `<p class="li__p--task" data-content>${inputValue}</p>`
+    const content = `<p class="li__p--task"
+    data-toggle="tooltip" data-placement="bottom" title="Arraste para a direita para remover tarefa">${inputValue}</p>`
 
     task.innerHTML = content
 
@@ -37,12 +37,12 @@ const CheckButton = () => {
     return checkButton
 }
 
-const FinishTask = () => {
-    const textTask = document.querySelector('[data-content]')
-    textTask.classList.toggle('task-done') 
-
-    const listItem = document.querySelector('[data-item]')
-    listItem.classList.toggle('opacity')
+const FinishTask = (event) => {
+    const checkButton = event.target
+    const taskDone = checkButton.parentElement
+    taskDone.classList.toggle('task-done--opacity')
 }
 
+
 //drag and drop
+

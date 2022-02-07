@@ -1,11 +1,7 @@
-
 /*>>>> Create a new task*/
 const newTask = document.querySelector('[data-form-button]')
 
-
-const createTask = (event) => {
-    event.preventDefault()
-
+const createTask = () => {
     const list = document.querySelector('[data-list')
     const input = document.querySelector('[data-form-input]')
     const inputValue = input.value
@@ -23,7 +19,13 @@ const createTask = (event) => {
     input.value = ""
 }
 
-newTask.addEventListener('click', createTask)
+newTask.addEventListener('click', (event) => {
+    const input = document.querySelector('[data-form-input]')
+    event.preventDefault()
+    if(input.value !== '') {
+        createTask(event)
+    }
+})
 
 /*>>>> Finish task*/
 const CheckButton = () => {

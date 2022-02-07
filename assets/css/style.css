@@ -106,6 +106,10 @@ h1 {
     padding-bottom: 10px;
 }
 
+.li__p--task:hover {
+    cursor: pointer;
+}
+
 .check-button {
     background-color: #22AE25;
     color: #f8f8f8;
@@ -129,12 +133,7 @@ h1 {
     outline: #40DE43 solid 4px;
 }
 
-.task-done {
-    text-decoration: line-through;
-    text-decoration-thickness: 6px;
-}
-
-.opacity {
+.task-done--opacity  {
     opacity: 40%;
 }
 

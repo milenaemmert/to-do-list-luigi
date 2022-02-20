@@ -1,9 +1,9 @@
 /*>>>> Create a new task*/
 const newTask = document.querySelector('[data-form-button]')
+const list = document.querySelector('[data-list]')
+const input = document.querySelector('[data-form-input]')
 
 const createTask = () => {
-    const list = document.querySelector('[data-list')
-    const input = document.querySelector('[data-form-input]')
     const inputValue = input.value
 
     const task = document.createElement('li')
@@ -20,7 +20,6 @@ const createTask = () => {
 }
 
 newTask.addEventListener('click', (event) => {
-    const input = document.querySelector('[data-form-input]')
     event.preventDefault()
     if(input.value !== '') {
         createTask(event)
@@ -39,10 +38,16 @@ const CheckButton = () => {
 
 const FinishTask = (event) => {
     const checkButton = event.target
-    const taskDone = checkButton.parentElement
-    taskDone.classList.toggle('task-done--opacity')
+    const task = checkButton.parentElement
+
+    if (task.classList.contains('task-done--opacity')) {
+        task.classList.remove('task-done--opacity')
+        list.insertBefore(task, list.firstChild)
+    } else {
+        task.classList.add('task-done--opacity')
+        list.insertBefore(task, list.lastChild.nextSibling)
+    }
 }
 
 
 //drag and drop
-
